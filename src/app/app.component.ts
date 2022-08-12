@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'PipesApp';
+  
+
+  doSomething() {
+    console.log('doing something');
+  }
 }

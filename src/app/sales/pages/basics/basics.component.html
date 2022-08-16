@@ -7,14 +7,62 @@
 
 <div class="grid">
     <div class="col-4">
-        <p-card header="uppercase">
-            Content
+        <p-card header="uppercase"
+                [subheader]="nameUpper">
+            {{ nameUpper | uppercase }}
         </p-card>
     </div>
     <div class="col-4">
-        2
+        <p-card header="lowercase"
+                [subheader]="nameLower">
+            {{ nameLower | lowercase }}
+        </p-card>
     </div>
     <div class="col-4">
-        3
+        <p-card header="titlecase"
+                [subheader]="nameTitel">
+            {{ nameTitel | titlecase }}
+        </p-card>
+    </div>
+</div>
+
+<div class="text-layout">
+    <h2>Date Pipe</h2>
+    <p>
+        Pipe to display formated dates
+    </p>
+</div>
+
+<div class="grid">
+    <div class="col-6">
+        <p-card header="uppercase">
+            <ul>
+                <li>date</li>
+                <li>date | date:</li>
+                <li>date | date: 'short'</li>
+                <li>date | date: 'long'</li>
+                <li>date | date: 'GGGG ww W dd LLLL EEEE HH:mm:ss'</li>
+                <li>date | date: 'long':'GMT-5'</li>
+                <li>date | date: 'long':'':'en'</li>
+                <li>date | date: 'long':'GMT+1':'fr'</li>
+                <li>date | date: 'long':'GMT+1':'es'</li>
+            </ul>
+        </p-card>
+    </div>
+    <div class="col-6">
+        <p-card header="lowercase">
+            <ul>
+                <li>{{ date }}</li>
+                <li>{{ date | date }}</li>
+                <li>{{ date | date: 'short' }}</li>
+                <li>{{ date | date: 'long' }}</li>
+                <li>{{ date | date: 'GGGG ww W dd LLLL EEEE HH:mm:ss' }}</li>
+                <hr>
+                <li>{{ date | date: 'long':'GMT-5'}}</li>
+                <li>{{ date | date: 'long':'':'en'}}</li>
+                <li>{{ date | date: 'long':'GMT+1':'fr'}}</li>
+                <li>{{ date | date: 'long':'GMT+1':'es'}}</li>
+            </ul>
+        </p-card>
     </div>
 </div>

@@ -1,1 +1,64 @@
-<p>no-commons works!</p>
+<div class="text-layout">
+    <h1>Some uncommon Pipes</h1>
+    <p>
+        Pipes included in Angular - Usually within the Common Module
+    </p>
+</div>
+
+<div class="p-grid">
+    <div class="p-col p-md-6 p-sm-9">
+        <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
+            <p>
+                Saludos {{ name }}, es un placer 
+                {{ gender | i18nSelect: invitationObj }} 
+                al evento.
+            </p> 
+            <p-button label="Cambiar cliente"
+                      (click)="changeCustomer()">
+            </p-button>
+        </p-fieldset>
+    </div>
+
+    <div class="p-col p-md-6 p-sm-9">
+        <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+            <p>
+                Actualmente {{clients.length | i18nPlural: clientsMap}}
+            </p> 
+            <p-button label="Borrar cliente"
+                        (click)="eraseCustomer()">
+            </p-button>
+        </p-fieldset>
+    </div>
+
+    <div class="p-col p-md-6 p-sm-9">
+        <p-fieldset legend="Slice Pipe" [toggleable]="true">
+            <p>
+                Original: {{ clients }}
+            </p>
+            <p>
+                Slice 0:2: {{ clients | slice:0:2 }}
+            </p>
+        </p-fieldset>
+    </div>
+
+    <div class="p-col p-md-6 p-sm-9">
+        <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
+            <ul>
+                <li *ngFor="let item of person | keyvalue">
+                    {{ item.key }} : {{ item.value }}
+                </li>
+                <li>
+                    {{ person | json }}
+                </li>
+            </ul>
+        </p-fieldset>
+    </div>
+
+    <div class="p-col p-md-6 p-sm-9">
+        <p-fieldset legend="Async Pipe" [toggleable]="true">
+            <pre>{{ myObservable | async }}</pre>
+            <pre *ngIf="!(myPromise | async)">Solving promise...</pre>
+            <pre>{{ myPromise | async }}</pre>
+        </p-fieldset>
+    </div>
+</div>

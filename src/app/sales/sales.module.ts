@@ -7,6 +7,7 @@ import { NumbersComponent } from './pages/numbers/numbers.component';
 import { NoCommonsComponent } from './pages/no-commons/no-commons.component';
 import { BasicsComponent } from './pages/basics/basics.component';
 import { OrderComponent } from './pages/order/order.component';
+import { UpperPipe } from './pipes/upper.pipe';
 
 
 @NgModule({
@@ -14,11 +15,12 @@ import { OrderComponent } from './pages/order/order.component';
     NumbersComponent,
     NoCommonsComponent,
     BasicsComponent,
-    OrderComponent
+    OrderComponent,
+    UpperPipe
   ],
   imports: [
     CommonModule,
-    PrimeNgModule
+    PrimeNgModule,
   ],
   exports: [
     NumbersComponent,

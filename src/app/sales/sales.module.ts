@@ -3,18 +3,21 @@ import { CommonModule } from '@angular/common';
 
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 
-import { NumbersComponent } from './pages/numbers/numbers.component';
-import { NoCommonsComponent } from './pages/no-commons/no-commons.component';
 import { BasicsComponent } from './pages/basics/basics.component';
+import { FlyPipe } from './pipes/fly.pipe';
+import { NoCommonsComponent } from './pages/no-commons/no-commons.component';
+import { NumbersComponent } from './pages/numbers/numbers.component';
 import { OrderComponent } from './pages/order/order.component';
 import { UpperPipe } from './pipes/upper.pipe';
 
 
+
 @NgModule({
   declarations: [
-    NumbersComponent,
-    NoCommonsComponent,
     BasicsComponent,
+    FlyPipe,
+    NoCommonsComponent,
+    NumbersComponent,
     OrderComponent,
     UpperPipe
   ],
@@ -23,9 +26,9 @@ import { UpperPipe } from './pipes/upper.pipe';
     PrimeNgModule,
   ],
   exports: [
-    NumbersComponent,
-    NoCommonsComponent,
     BasicsComponent,
+    NoCommonsComponent,
+    NumbersComponent,
     OrderComponent,
   ]
 })

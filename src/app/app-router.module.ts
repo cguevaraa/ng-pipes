@@ -20,7 +20,7 @@ const routes: Routes = [
     component: NumbersComponent,
   },
   {
-    path: 'order',
+    path: 'sort',
     component: OrderComponent,
   },
   {

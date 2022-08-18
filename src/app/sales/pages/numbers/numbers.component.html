@@ -7,20 +7,20 @@
 
 <div class="grid">
     <div class="col-4">
-        <p-card header="Net Sales"
+        <p-card header="Sales (net)"
                 subheader="Current year">
                 <i class="pi pi-dollar"></i>
             {{ netSales | number: '1.2-2' }}
         </p-card>
     </div>
     <div class="col-4">
-        <p-card header="Brut Sales"
+        <p-card header="Sales (gros)"
                 subheader="Current year">
             {{ (netSales + 1000000) | currency:'EUR' }}
         </p-card>
     </div>
     <div class="col-4">
-        <p-card header="Profit Percentage"
+        <p-card header="Profit (pct)"
                 subheader="Current year">
             {{ (percentage) | percent:'2.2-2' }}
         </p-card>

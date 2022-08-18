@@ -13,6 +13,8 @@ export class OrderComponent {
   iconLabel: string = 'pi pi-arrow-circle-up';
   buttonLabel: string = 'to uppercase'
 
+  sortValue: string = '';
+
   heroes: Hero[] = [
     {
       name: 'Superman',
@@ -41,6 +43,13 @@ export class OrderComponent {
     },
   ]
 
+  colorMap = {
+    0: 'red', 
+    1: 'black',
+    2: 'blue',
+    3: 'green'
+  }
+
   change() {
     this.toUpper = !this.toUpper;
     if (this.toUpper) {
@@ -50,6 +59,9 @@ export class OrderComponent {
       this.iconLabel = 'pi pi-arrow-circle-up';
       this.buttonLabel = 'to uppercase'
     }
+  }
 
+  setSortValue(value: string): void {
+    this.sortValue = value;
   }
 }

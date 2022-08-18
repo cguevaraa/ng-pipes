@@ -8,6 +8,7 @@ import { FlyPipe } from './pipes/fly.pipe';
 import { NoCommonsComponent } from './pages/no-commons/no-commons.component';
 import { NumbersComponent } from './pages/numbers/numbers.component';
 import { OrderComponent } from './pages/order/order.component';
+import { SortPipe } from './pipes/sort.pipe';
 import { UpperPipe } from './pipes/upper.pipe';
 
 
@@ -19,7 +20,8 @@ import { UpperPipe } from './pipes/upper.pipe';
     NoCommonsComponent,
     NumbersComponent,
     OrderComponent,
-    UpperPipe
+    SortPipe,
+    UpperPipe,
   ],
   imports: [
     CommonModule,

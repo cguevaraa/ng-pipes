@@ -10,7 +10,6 @@ import { SalesModule } from './sales/sales.module';
 
 // Change app locale
 import  '@angular/common/locales/global/es'
-import  '@angular/common/locales/global/fr'
 
 @NgModule({
   declarations: [
